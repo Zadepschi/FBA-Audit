@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Request a free Amazon FBA reimbursement audit from FBA Recovery."
+  >
+  <title>Contact Us | FBA Recovery</title>
+
+  <link rel="stylesheet" href="Styles/contact.css">
+   <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+      <header class="header">
+    <div class="container header__inner">
+
+      <a href="index.html" class="logo" aria-label="FBA Recovery home">
+        <span class="logo__icon">F</span>
+
+        <span class="logo__text">
+          <strong>FBA RECOVERY</strong>
+          <small>AUDIT &amp; CLAIM SUPPORT</small>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a href="services-process.html">What We Review</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="contact.html" class="nav__cta">Get a Free Audit</a>
+      </nav>
+
+      <div class="language-switch" aria-label="Choose language">
+        <a
+          href="index.html"
+          class="language-switch__active"
+          aria-current="page"
+        >EN</a>
+
+        <span>|</span>
+
+        <a href="ru.html">RU</a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="container contact__grid">
+
+        <div class="contact__content">
+
+          <span class="eyebrow">GET STARTED</span>
+
+          <h2>
+            Start with a
+            <span>free FBA audit.</span>
+          </h2>
+
+          <p class="contact__description">
+            Tell us about your Amazon business. We will contact
+            you to discuss the initial review, the information
+            needed, and the service terms before any claim work begins.
+          </p>
+
+          <div class="contact__detail">
+            <span class="contact__detail-icon" aria-hidden="true">@</span>
+
+            <div>
+              <strong>Business inquiries</strong>
+              <p>
+                Use the form to request a call or email follow-up.
+              </p>
+            </div>
+          </div>
+
+          <div class="contact__detail">
+            <span class="contact__detail-icon" aria-hidden="true">US</span>
+
+            <div>
+              <strong>Marketplace focus</strong>
+              <p>
+                Amazon sellers — select your marketplace in the form.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+        <form
+          class="contact-form"
+          name="audit-inquiry"
+          method="POST"
+          data-netlify="true"
+          action="/thank-you.html"
+        >
+          <input
+            type="hidden"
+            name="form-name"
+            value="audit-inquiry"
+          >
+
+          <h3>Request a Free Audit</h3>
+
+          <p class="contact-form__intro">
+            Share a few details and we will follow up.
+            Please do not submit passwords or sensitive account data.
+          </p>
+
+          <div class="form-group">
+            <label for="name">Full Name *</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your full name"
+              autocomplete="name"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">Business Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@company.com"
+              autocomplete="email"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="marketplace">Amazon Marketplace *</label>
+            <select id="marketplace" name="marketplace" required>
+              <option value="" disabled selected>Select marketplace</option>
+              <option value="Amazon US">Amazon US</option>
+              <option value="Amazon Canada">Amazon Canada</option>
+              <option value="Amazon Europe">Amazon Europe</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="volume">Approximate Monthly Order Volume</label>
+            <select id="volume" name="monthly-order-volume">
+              <option value="">Select order volume</option>
+              <option value="Under 500">Under 500 orders</option>
+              <option value="500-2000">500–2,000 orders</option>
+              <option value="2000+">Over 2,000 orders</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">What would you like us to review?</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="For example: lost inventory, returns, or reimbursement discrepancies. Do not include account credentials."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="button button--primary button--full"
+          >
+            Request Free Audit
+            <span aria-hidden="true">→</span>
+          </button>
+
+          <p class="contact-form__privacy">
+            Submitting this form does not grant account access
+            or authorize claims. We will agree on scope, access
+            method, and service terms separately.
+          </p>
+
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  
+    <!-- DISCLAIMER -->
+    <section class="disclaimer">
+      <div class="container">
+
+        <p>
+          <strong>Important information:</strong>
+          We are an independent service provider and are not
+          affiliated with, endorsed by, or sponsored by Amazon.com, Inc.
+          Amazon determines reimbursement eligibility and outcomes;
+          no recovery is guaranteed. Any claim work is performed only
+          with the seller's authorization. The 20% success fee applies
+          to qualifying recovered amounts as defined in the written
+          service agreement. Please review that agreement before
+          engaging our services.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <a
+        href="index.html"
+        class="logo logo--footer"
+        aria-label="FBA Recovery home"
+      >
+        <span class="logo__icon">F</span>
+
+        <span class="logo__text">
+          <strong>FBA RECOVERY</strong>
+          <small>AUDIT &amp; CLAIM SUPPORT</small>
+        </span>
+      </a>
+
+
+      <p class="footer__copyright">
+        © <span id="year">2026</span>
+        FBA Recovery Audit Services. All rights reserved.
+      </p>
+
+
+      <div class="footer__links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="ru.html">Русский</a>
+      </div>
+
+    </div>
+  </footer>
+
+
+</body>
+</html>

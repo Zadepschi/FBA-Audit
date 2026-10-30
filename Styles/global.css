@@ -1,0 +1,422 @@
+/* =========================
+   1. Variables and Reset
+========================= */
+
+:root {
+  --color-bg: #101c2c;
+  --color-bg-light: #16263a;
+  --color-primary: #37c6a0;
+  --color-primary-dark: #22a985;
+  --color-text: #18283a;
+  --color-muted: #667487;
+  --color-white: #ffffff;
+  --color-light: #f4f7fa;
+  --color-border: #e1e7ee;
+  --container-width: 1160px;
+  --radius: 14px;
+  --shadow: 0 12px 36px rgba(16, 28, 44, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Arial, sans-serif;
+  color: var(--color-text);
+  background: var(--color-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(55, 198, 160, 0.6);
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* =========================
+   2. Containers and Typography
+========================= */
+
+.container {
+  width: min(var(--container-width), calc(100% - 40px));
+  margin-inline: auto;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--color-primary-dark);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  letter-spacing: -0.6px;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 4.5vw, 3.8rem);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3.2vw, 2.65rem);
+  font-weight: 750;
+}
+
+h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+p {
+  color: var(--color-muted);
+}
+
+h1 span,
+h2 span {
+  color: var(--color-primary);
+}
+
+/* =========================
+   3. Header
+========================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(16, 28, 44, 0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.header__inner {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  flex-shrink: 0;
+}
+
+.logo__icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--color-primary);
+  color: var(--color-bg);
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+
+.logo__text strong {
+  color: var(--color-white);
+  font-size: 0.9rem;
+  letter-spacing: 0.7px;
+}
+
+.logo__text small {
+  margin-top: 2px;
+  color: #a9bacb;
+  font-size: 0.62rem;
+  letter-spacing: 1.5px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav a {
+  color: #d4dee8;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--color-primary);
+}
+
+.nav .nav__cta {
+  padding: 9px 14px;
+  color: var(--color-bg);
+  background: var(--color-primary);
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.nav .nav__cta:hover {
+  color: var(--color-bg);
+  background: #65dbbc;
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #8192a5;
+  font-size: 0.82rem;
+  flex-shrink: 0;
+}
+
+.language-switch a {
+  color: #c5d0dc;
+}
+
+.language-switch a:hover,
+.language-switch .language-switch__active {
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+/* =========================
+   4. Buttons
+========================= */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 45px;
+  padding: 11px 17px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 750;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button--primary {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
+
+.button--primary:hover {
+  background: #65dbbc;
+}
+
+.button--secondary {
+  color: var(--color-white);
+  border-color: #415267;
+  background: transparent;
+}
+
+.button--secondary:hover {
+  border-color: var(--color-primary);
+}
+
+.button--full {
+  width: 100%;
+}
+
+/* =========================
+   5. Footer
+========================= */
+
+.footer {
+  padding: 22px 0;
+  background: #0b1522;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.logo--footer .logo__icon {
+  width: 34px;
+  height: 34px;
+  font-size: 1.15rem;
+}
+
+.logo--footer .logo__text strong {
+  font-size: 0.8rem;
+}
+
+.logo--footer .logo__text small {
+  font-size: 0.56rem;
+}
+
+.footer__copyright {
+  color: #9cabbc;
+  font-size: 0.76rem;
+}
+
+.footer__links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.footer__links a {
+  color: #c1cdd9;
+  font-size: 0.77rem;
+  transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+  color: var(--color-primary);
+}
+
+/* =========================
+   6. Responsive Global Styles
+========================= */
+
+@media (max-width: 1050px) {
+  .nav {
+    gap: 12px;
+  }
+
+  .nav a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .header__inner {
+    min-height: 68px;
+    gap: 12px;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .section {
+    padding: 46px 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .header__inner {
+    min-height: 64px;
+  }
+
+  .logo {
+    gap: 7px;
+  }
+
+  .logo__icon {
+    width: 33px;
+    height: 33px;
+    font-size: 1.15rem;
+  }
+
+  .logo__text strong {
+    font-size: 0.74rem;
+  }
+
+  .logo__text small {
+    font-size: 0.53rem;
+    letter-spacing: 1px;
+  }
+
+  .language-switch {
+    gap: 5px;
+    font-size: 0.78rem;
+  }
+
+  .section {
+    padding: 36px 0;
+  }
+
+  .footer {
+    padding: 18px 0;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+  }
+
+  .footer__links {
+    gap: 12px;
+  }
+}
+
+/* =========================
+   7. Reduced Motion
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
