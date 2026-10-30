@@ -146,6 +146,7 @@ img {
   display: flex;
   align-items: center;
   gap: 28px;
+  text-transform: uppercase;
 }
 
 .nav a {
@@ -385,6 +386,7 @@ img {
 
   .nav {
     gap: 5px;
+   
   }
 
   .nav a {
@@ -395,6 +397,7 @@ img {
     gap: 3px;
     padding: 7px 6px;
     font-size: 0.65rem;
+
   }
 }
 

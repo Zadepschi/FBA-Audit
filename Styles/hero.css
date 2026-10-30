@@ -590,60 +590,195 @@
 }
 
 /* =========================================
-   MOBILE
+   MOBILE HERO — COMPACT & READABLE
 ========================================= */
 
 @media (max-width: 650px) {
-  .hero__offer {
-    margin-top: 18px;
+  .hero {
+    position: relative;
+    display: block;
+
+    /* Header + Hero = at least one screen */
+    height: auto;
+    min-height: calc(100vh - var(--header-height));
+    min-height: calc(100svh - var(--header-height));
+
+    /* Remove excessive empty space */
+    padding: 20px 0 24px;
+    overflow: hidden;
+    isolation: isolate;
   }
 
+  /* Content positioning */
+  .hero__inner {
+    position: relative;
+    z-index: 2;
+    width: calc(100% - 36px);
+    margin-inline: auto;
+  }
+
+  .hero__content {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* Eyebrow */
+  .hero .eyebrow {
+    margin-bottom: 17px;
+    padding: 7px 10px;
+    font-size: 0.64rem;
+    letter-spacing: 0.9px;
+    line-height: 1.4;
+  }
+
+  /* Main heading */
+  .hero__title {
+    max-width: 100%;
+    font-size: clamp(2rem, 7.8vw, 2.7rem);
+    line-height: 1.08;
+    letter-spacing: -1.1px;
+    text-wrap: balance;
+  }
+
+  .hero__title span {
+    margin-top: 3px;
+  }
+
+  /* Offer heading */
   .hero__offer-title {
-    font-size: 1.15rem;
-    letter-spacing: 0.3px;
+    margin-top: 18px;
+    margin-bottom: 9px;
+    color: #087747;
+    font-size: clamp(1.05rem, 4.5vw, 1.3rem);
+    line-height: 1.3;
   }
 
+  /* Offer description */
   .hero__offer-description {
-    margin-top: 9px;
-    font-size: 1rem;
-    line-height: 1.55;
+    margin-top: 0;
+    margin-bottom: 14px;
+    color: #354139;
+    font-size: 0.98rem;
+    font-weight: 500;
+    line-height: 1.5;
   }
 
+  /* Free audit / success fee */
   .hero__pricing {
-    gap: 9px;
-    margin-top: 15px;
-    padding: 12px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 10px 12px;
   }
 
   .hero__pricing-title {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
   }
 
-  .hero__pricing-divider {
-    height: 17px;
-  }
-
+  /* Commission explanation */
   .hero__offer-note {
     margin-top: 10px;
-    font-size: 0.85rem;
+    margin-bottom: 0;
+    color: #303a32;
+    font-size: 0.88rem;
+    font-weight: 500;
     line-height: 1.5;
+  }
+
+  /* Main CTA */
+  .hero__actions {
+    display: flex;
+    margin-top: 19px;
+  }
+
+  .hero__actions .button--primary {
+    width: 100%;
+    min-height: 52px;
+    padding: 13px 14px;
+    font-size: 0.9rem;
+  }
+
+  /* Trust note */
+  .hero__note {
+    margin-top: 12px;
+    color: #374139;
+    font-size: 0.7rem;
+    line-height: 1.5;
+  }
+
+  /* Blurred, subtle background image */
+  .hero::before {
+    top: auto;
+    right: -3%;
+    bottom: 0;
+    left: -3%;
+
+    z-index: 0;
+    width: 106%;
+    height: 30%;
+    min-height: 170px;
+    max-height: 260px;
+
+    background-image: url("../images/money.jpg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+
+    opacity: 0.52;
+    
+    transform: scale(1.03);
+    mix-blend-mode: multiply;
+
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000 18%,
+      #000 78%,
+      transparent 100%
+    );
+
+    mask-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      #000 18%,
+      #000 78%,
+      transparent 100%
+    );
   }
 }
 
-/* Small phones */
-
+/* Extra-small phones */
 @media (max-width: 380px) {
-  .hero__pricing {
-    gap: 7px;
-    padding: 10px;
+  .hero__inner {
+    width: calc(100% - 30px);
   }
 
-  .hero__pricing-title {
-    font-size: 0.7rem;
-    letter-spacing: 0.2px;
+  .hero {
+    padding-top: 16px;
+    padding-bottom: 20px;
+  }
+
+  .hero__title {
+    font-size: 1.95rem;
+    letter-spacing: -0.8px;
+  }
+
+  .hero__offer-title {
+    font-size: 1rem;
+  }
+
+  .hero__offer-description {
+    font-size: 0.93rem;
   }
 
   .hero__offer-note {
-    font-size: 0.8rem;
+    font-size: 0.84rem;
+  }
+
+  .hero__actions .button--primary {
+    font-size: 0.84rem;
   }
 }
